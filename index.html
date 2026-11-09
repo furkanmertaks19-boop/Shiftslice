@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShiftSlice gizlilik politikası</title>
+<style>
+:root { --bg: #ffffff; --fg: #1b1b1f; --muted: #5d5d66; --line: #dcdce3; --accent: #3355cc; --code: #f2f2f6; }
+@media (prefers-color-scheme: dark) { :root { --bg: #141417; --fg: #ececf1; --muted: #a3a3ad; --line: #34343c; --accent: #8fa8ff; --code: #22222a; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 "Segoe UI", system-ui, sans-serif; }
+main { max-width: 52rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
+nav { display: flex; gap: 1rem; font-size: .95rem; margin-bottom: 1.5rem; }
+a { color: var(--accent); }
+h1 { font-size: 1.8rem; margin: 0 0 .25rem; } h2 { margin-top: 2.2rem; border-top: 1px solid var(--line); padding-top: 1.2rem; font-size: 1.35rem; }
+h3 { margin-top: 1.8rem; font-size: 1.1rem; }
+table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; font-size: .93rem; }
+th, td { border: 1px solid var(--line); padding: .45rem .6rem; text-align: left; vertical-align: top; }
+code { background: var(--code); padding: .05rem .3rem; border-radius: 4px; font-size: .9em; }
+section + section { margin-top: 4rem; border-top: 3px solid var(--line); padding-top: 2rem; }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="#tr">Türkçe</a><a href="#en">English</a></nav>
+<section id="tr" lang="tr">
+<h1>ShiftSlice gizlilik politikası</h1>
+<p><strong>Yürürlük tarihi:</strong> 9 Kasım 2026</p>
+<p><strong>Yayıncı (Microsoft Store'da görünen ad):</strong> Mediaks
+Stüdyosu</p>
+<p><strong>Veri sorumlusu:</strong> Furkan Mert Aksungur (ShiftSlice'ı
+Mediaks Stüdyosu adıyla yayımlayan bireysel geliştirici)</p>
+<p><strong>Destek ve gizlilik iletişimi:</strong> <a
+href="mailto:furkanmertaks@gmail.com"><span>furkanmertaks@gmail.com</span></a></p>
+<p><strong>Politika sürümü:</strong> 1 (ShiftSlice 1.0.12 ve
+sonrası)</p>
+<p>Bu politika üç ayrı konuyu anlatır: ShiftSlice uygulamasının
+dosyalarını bilgisayarında nasıl işlediği, bize e-postayla yazdığında
+yazışmanın nasıl işlendiği ve bu sayfanın yayımlandığı web sitesi.
+Bunlar birbirinden ayrıdır: uygulamanın işlediği hiçbir şey bize
+ulaşmaz; bize yalnız senin gönderdiğin e-posta ulaşır.</p>
+<h2 id="kısaca">Kısaca</h2>
+<ul>
+<li>ShiftSlice dosyalarını yalnız kendi bilgisayarında dönüştürür. Hesap
+istemez, reklam göstermez, kullanım ölçümü ve çökme raporu
+toplamaz.</li>
+<li>ShiftSlice'ın kendi kodunda ağ bağlantısı kuran bir bölüm yoktur.
+Dosyalarını, dosya adlarını ya da kayıtlarını bize göndermez; bunlara
+erişimimiz yoktur.</li>
+<li>Bilgisayarında kalan kayıtlar (ayarlar, son 20 işin geçmişi,
+ayıklanmış günlük, geçici dosyalar) aşağıda tek tek anlatılmıştır;
+hepsini görebilir ve silebilirsin.</li>
+<li>Destek için bize e-posta yazarsan yazışma Gmail'de tutulur ve
+yazışma kapandıktan sonra en çok 12 ay saklanır.</li>
+</ul>
+<h2 id="bölüm-1-shiftslice-uygulaması">Bölüm 1: ShiftSlice
+uygulaması</h2>
+<h3 id="dosyaların-nerede-işlenir">Dosyaların nerede işlenir?</h3>
+<p>Yalnız kendi bilgisayarında. Bir dosyayı menüdeki bir dilime
+bıraktığında ShiftSlice o dosyayı okur ve seçtiğin işlemi uygular.</p>
+<ul>
+<li><strong>Çıktı:</strong> Kaynak dosyanın yanına ya da Ayarlar →
+Çıktı'da seçtiğin klasöre yazılır. Kaynak dosya değişmez; yalnız
+<strong>Taşı</strong> işlemi dosyayı yerinden alır.</li>
+<li><strong>Dönüştürücüler:</strong> Dönüşümü ShiftSlice'ın kendi kodu
+ya da ShiftSlice'la birlikte gelen ayrı programlar yapar: FFmpeg,
+Pandoc, Typst, PDFium, ImageMagick, tablolar için LibreOffice Calc ve 3B
+modeller için OCCT tabanlı bir dönüştürücü. Tablodan PDF'in bir bölümü
+ShiftSlice'ın içinde, ayrı program olmadan üretilir. Bu programlar
+bilgisayarında, senin kullanıcı hesabının yetkileriyle ve ShiftSlice'ın
+verdiği dosya üzerinde çalışır. Calc görünmeyen ayrı bir masaüstünde
+açılır.</li>
+<li><strong>Yardımcı dosyalar:</strong> Bazı dosyalar başka dosyalara
+başvurur: bir belgedeki görsel, bir çalma listesindeki şarkılar, bir 3B
+montajdaki parçalar. ShiftSlice bunlardan yalnız kaynak dosyayla aynı
+klasörde ya da alt klasörlerinde olanları kullanır. İnternet adresine,
+ağ paylaşımına ya da klasörün dışına giden başvurular okunmaz. Bu
+durumda dönüşüm o parçalar olmadan yapılır ve bildirimde söylenir ya da
+güvenlik için hiç yapılmaz.</li>
+</ul>
+<h3 id="ağ-bağlantısı">Ağ bağlantısı</h3>
+<p>ShiftSlice'ın kendi kodunda internet bağlantısı, kullanım ölçümü,
+reklam, çökme raporu ya da güncelleme denetimi yoktur. Başlatıcıdaki
+site simgeleri bile internetten indirilmez; yalnız bilgisayarındaki ayar
+klasöründe varsa gösterilir.</p>
+<p>Birlikte gelen dönüştürücüler ayrı programlardır. ShiftSlice onları
+başlatırken ağ erişimini şu ayarlarla kısıtlar:</p>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Uygulanan kısıt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FFmpeg ve FFprobe</td>
+<td>Yalnız yerel dosya ve iç boru protokolleri açıktır
+(<code>-protocol_whitelist file,pipe</code>). Bir çalma listesindeki
+<code>http</code>, <code>https</code>, <code>rtmp</code> ya da
+<code>tcp</code> adreslerine bağlanılmaz</td>
+</tr>
+<tr>
+<td>Pandoc</td>
+<td><code>--sandbox</code> kipinde çalışır; belgedeki görseller ve başka
+dosyalar okunmaz. Belge Pandoc'a gitmeden önce uzak kaynak başvuruları
+ve gömülü ham Typst kodu çıkarılır</td>
+</tr>
+<tr>
+<td>ImageMagick</td>
+<td>ShiftSlice'ın yazdığı güvenlik kuralı internet adreslerini, betik
+biçimlerini ve dış yardımcı programları kapatır</td>
+</tr>
+<tr>
+<td>LibreOffice Calc</td>
+<td>İşe özel ayarlarla açılır: makrolar çalışmaz, dış bağlantılar
+güncellenmez, internet vekili kapalı bir yerel adrese
+(<code>127.0.0.1:9</code>) yönlenir</td>
+</tr>
+<tr>
+<td>Dış programların hepsi</td>
+<td>Vekil sunucu ortam değişkenleri kapalı bir yerel adrese
+(<code>127.0.0.1:9</code>) yönlendirilir. Typst'in paket klasörleri işin
+geçici klasörüdür</td>
+</tr>
+</tbody>
+</table>
+<p>Bu kısıtlar programların kendi ayarlarıyla uygulanır; ShiftSlice
+Windows düzeyinde bir güvenlik duvarı kuralı eklemez. Microsoft Store
+paketinin bildirimi yalnız tam güvenle çalışma yetkisi
+(<code>runFullTrust</code>) ister; bu yetki ağ erişimini ne açar ne de
+kapatır.</p>
+<p>Verinin bilgisayardan çıkabileceği yollar şunlardır ve hepsi senin
+eyleminle olur:</p>
+<table>
+<thead>
+<tr>
+<th>Yol</th>
+<th>Ne olur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Çıktıyı bir ağ klasörüne ya da eşitlenen bir klasöre (OneDrive vb.)
+yazdırmak</td>
+<td>Dosya o klasörün hizmetine gider ve o hizmetin politikasına tabidir.
+Kurum ağ konumlarını kapatabilir</td>
+</tr>
+<tr>
+<td>Panoya kopyalamak</td>
+<td>Panodaki metin, yapıştırdığın uygulamaya gider</td>
+</tr>
+<tr>
+<td>Başlatıcıdaki bir site yuvasını seçmek</td>
+<td>Site varsayılan tarayıcında açılır; bundan sonrası tarayıcının ve
+sitenin politikasına tabidir</td>
+</tr>
+<tr>
+<td>Başlatıcıdaki bir uygulama yuvasını ya da Terminal'i açmak</td>
+<td>O uygulama kendi kurallarıyla çalışır</td>
+</tr>
+<tr>
+<td>Microsoft Store'dan kurmak ve güncellemek</td>
+<td>Kurulum ve güncellemeyi Microsoft Store indirir. Store'un topladığı
+veriler <a href="https://privacy.microsoft.com/">Microsoft Gizlilik
+Bildirimi</a>'ne tabidir. ShiftSlice bu trafiğe katılmaz</td>
+</tr>
+</tbody>
+</table>
+<h3 id="klavye-ve-fare-dinleyicisi">Klavye ve fare dinleyicisi</h3>
+<p><strong>Neye erişir:</strong> Sürükleme sırasında Shift, Ctrl ya da
+Alt'a dokunduğunu anlamak için ShiftSlice, Windows'un genel klavye ve
+fare dinleyicisini kullanır. Windows bu dinleyiciye bütün tuş olaylarını
+iletir. ShiftSlice her tuşu geldiği anda süzer:</p>
+<ul>
+<li>Sol ve sağ Shift, Ctrl, Alt ile Esc'i tanır. Başlatıcı açıkken 1–8
+rakamlarını da tanır.</li>
+<li>Diğer tuşların hangi tuş olduğuna bakmaz; onları tek bir "başka tuş"
+bilgisine çevirir. Bu bilgi, Shift+A gibi bir yazma hareketinin menüyü
+açmasını önler.</li>
+<li>Fare için yalnız sürüklemenin başladığı ve bittiği an ile imlecin
+konumu kullanılır.</li>
+</ul>
+<p><strong>Ne saklanır:</strong> Hiçbir tuş, yazdığın metin, tuş geçmişi
+ya da imleç izi diske yazılmaz ve gönderilmez. Bellekte yalnız o an
+basılı olan tetik tuşları tutulur.</p>
+<p><strong>Nasıl yönetirsin:</strong> <strong>Hareketleri
+duraklat</strong> (tepsi panelinde ve Ayarlar → Genel'de) menülerin
+açılmasını durdurur; dinleyici bu sırada çalışmaya devam eder ama hiçbir
+menü açılmaz. Dinleyiciyi tamamen kapatmak için ShiftSlice'tan tepsiden
+çık. Windows açılışında başlamasını Ayarlar → Genel → <strong>Windows
+oturumuyla başlat</strong> ile kapatabilirsin.</p>
+<h3 id="menünün-buzlu-arka-planı-için-ekran-alanı">Menünün buzlu arka
+planı için ekran alanı</h3>
+<p><strong>Neye erişir:</strong> Menü ya da başlatıcı açılırken
+ShiftSlice, imlecin çevresinde menünün kaplayacağı kare alanın
+görüntüsünü alır, bulanıklaştırır ve menünün yarı saydam arka planı
+olarak gösterir. Ekranın geri kalanı alınmaz.</p>
+<p><strong>Ne saklanır:</strong> Görüntü yalnız bellekte tutulur, diske
+yazılmaz, gönderilmez ve menü kapanınca atılır. Ayarlar'daki menü
+önizlemesi ekranını değil, uygulamanın çizdiği renk bantlarını
+kullanır.</p>
+<p><strong>Nasıl yönetirsin:</strong> Bu görüntü yalnız Windows'ta
+saydamlık efektleri açıkken alınır. Windows Ayarları → Kişiselleştirme →
+Renkler → <strong>Saydamlık efektleri</strong>'ni kapatırsan menü opak
+bir yüzeyle açılır ve ekran görüntüsü alınmaz. ShiftSlice'ın kendi
+ayarlarında bunu kapatan ayrı bir seçenek yoktur.</p>
+<h3 id="pano">Pano</h3>
+<p><strong>Neye erişir:</strong> ShiftSlice panoya yalnız sen
+istediğinde yazar: <strong>Yolu kopyala</strong>, <strong>Adı
+kopyala</strong>, <strong>SHA-256</strong> ve hata kartındaki
+<strong>Ayrıntıyı kopyala</strong>. Panonun içeriğini hiç okumaz.</p>
+<p><strong>Ne saklanır:</strong> Hiçbir şey. Yazılan metin panoda
+Windows'un yönetiminde kalır.</p>
+<p><strong>Nasıl yönetirsin:</strong> Bu işlemleri kullanmazsan panoya
+yazılmaz. Kurumun panoyu kapattığı bilgisayarlarda bu dört işlem
+görünmez ve panoya hiçbir şey yazılmaz.</p>
+<h3 id="i̇ş-geçmişi">İş geçmişi</h3>
+<p><strong>Ne saklanır:</strong> Son 20 işin işlem adı, girdi ve çıktı
+dosyalarının yolları, zamanı ve <strong>Geri al</strong> için çıktıların
+boyutu ve özeti. Menüyü sık kullanılana göre sıralamak için işlem başına
+kullanım sayısı. Dosya içerikleri saklanmaz.</p>
+<p><strong>Nasıl yönetirsin:</strong> En yeni 20 iş tutulur, eskisi
+silinir. Ayarlar → Genel → İş geçmişi → <strong>Geçmişi temizle</strong>
+geçmişi ve kullanım sayaçlarını hemen siler. Geçmişten bir işi
+<strong>Geri al</strong> ile geri aldığında o işin çıktıları Geri
+Dönüşüm Kutusu'na gider. Kurumun geçmişi kapattığı bilgisayarlarda
+geçmiş diske hiç yazılmaz, yalnız o oturumda bellekte tutulur.</p>
+<h3 id="geçici-dosyalar">Geçici dosyalar</h3>
+<table>
+<thead>
+<tr>
+<th>Dosya</th>
+<th>İçerik</th>
+<th>Ne zaman silinir</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>İşin geçici klasörü</td>
+<td>Dönüşüm sırasında <code>%TEMP%\ShiftSlice\&lt;iş numarası&gt;</code>
+içinde ara dosyalar ve çıktının yanında <code>.shiftslice-…</code> adlı
+yarım dosyalar</td>
+<td>İş bitince, iptal edildiğinde ya da hata verdiğinde. Bilgisayar iş
+sırasında kapanırsa ya da dönüştürücü zorla kapanırsa ShiftSlice o işe
+ait yarım dosyaları bir sonraki açılışta siler. Kaynak dosyaya ve
+tamamlanmış çıktılara dokunmaz</td>
+</tr>
+<tr>
+<td>İş emri</td>
+<td>Bir işin dosya yolları ve seçenekleri; arayüzden dönüştürücü
+sürecine aktarılır</td>
+<td>İş bitince</td>
+</tr>
+<tr>
+<td>Calc profili</td>
+<td>Tablo dönüşümünde LibreOffice Calc'ın işe özel ayar klasörü, işin
+geçici klasöründe. Belge içeriği içermez</td>
+<td>İş klasörüyle birlikte</td>
+</tr>
+<tr>
+<td>Önizleme</td>
+<td>Kırpma ve arka plan düzenleyicileri açılırken
+<code>%TEMP%\ShiftSlice</code> içinde bir PNG</td>
+<td>Görüntü pencereye yüklenince</td>
+</tr>
+<tr>
+<td>PDF önizlemesi</td>
+<td>Tablodan PDF'te sayfaların PNG görüntüleri,
+<code>%TEMP%\ShiftSlice\onizleme-…</code> içinde.
+<strong>Kaydet</strong>'e basmazsan PDF'in kendisi Geri Dönüşüm
+Kutusu'na gönderilir</td>
+<td>Önizleme penceresi kapanınca</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bilgisayarında-kalan-diğer-kayıtlar">Bilgisayarında kalan diğer
+kayıtlar</h3>
+<table>
+<thead>
+<tr>
+<th>Kayıt</th>
+<th>İçerik</th>
+<th>Ne zaman silinir</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ayarlar</td>
+<td>Seçtiğin tuşlar, görünüm tercihleri, işlem açma/kapama seçimleri,
+başlatıcıya eklediğin uygulama yolları ve site adresleri, sabit
+klasörler, engel listesi</td>
+<td>Sen değiştirene ya da silene kadar</td>
+</tr>
+<tr>
+<td>Günlük</td>
+<td>Açılış satırı (sürüm, paket türü), iş sonucu ve hata türü. Dosya ve
+klasör yolları, dosya adları ve adresler yazılmadan önce
+<code>&lt;yol&gt;</code>, <code>&lt;ad&gt;</code>,
+<code>&lt;adres&gt;</code> ile değiştirilir. Tuşlar, dosya içerikleri ve
+ekran görüntüleri hiç yazılmaz</td>
+<td>En çok 2 × 1 MB tutulur. 30 günden eski günlükler açılışta
+silinir</td>
+</tr>
+<tr>
+<td>Görsel motoru ayarı</td>
+<td>ImageMagick'in güvenlik kuralları (iki küçük XML dosyası). Kişisel
+veri içermez</td>
+<td>Her açılışta yeniden yazılır</td>
+</tr>
+</tbody>
+</table>
+<p>ShiftSlice, önceki adıyla kullanılmış bir sürümün profilini bulursa
+ilk açılışta ayarlarını, iş geçmişini ve site simgelerini yeni profile
+kopyalar. Eski dosyaları silmez ve değiştirmez.</p>
+<h3 id="verilerin-yeri-ve-kaldırma">Verilerin yeri ve kaldırma</h3>
+<table>
+<thead>
+<tr>
+<th>Sürüm</th>
+<th>Ayarlar ve iş geçmişi</th>
+<th>Günlük ve görsel motoru ayarı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft Store (MSIX)</td>
+<td><code>%LOCALAPPDATA%\Packages\&lt;ShiftSlice paket ailesi&gt;\LocalCache\Roaming\ShiftSlice</code></td>
+<td><code>%LOCALAPPDATA%\Packages\&lt;ShiftSlice paket ailesi&gt;\LocalCache\Local\ShiftSlice</code></td>
+</tr>
+<tr>
+<td>ZIP</td>
+<td><code>%APPDATA%\ShiftSlice</code></td>
+<td><code>%LOCALAPPDATA%\ShiftSlice</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Store sürümünde bu klasörleri Windows, ShiftSlice'a özel paket veri
+klasörüne
+(<code>%LOCALAPPDATA%\Packages\&lt;ShiftSlice paket ailesi&gt;</code>)
+yönlendirir. Windows bir MSIX paketini kaldırırken o paketin veri
+klasörünü de kaldırır; ayarlar, iş geçmişi ve günlük bu
+klasördedir.</li>
+<li>ShiftSlice'ın ürettiği çıktı dosyaları senin dosyalarındır, seçtiğin
+yerdedir ve kaldırmada silinmez.</li>
+<li>Geçici dosyalar (<code>%TEMP%\ShiftSlice</code>) paket veri
+klasörünün parçası olarak belgelenmemiştir. ShiftSlice bunları iş
+sonunda ya da bir sonraki açılışta siler. Yarım kalmış bir iş varken
+uygulamayı kaldırırsan bu klasörü elle silebilirsin.</li>
+<li>ZIP sürümünde yukarıdaki klasörleri elle silebilirsin.</li>
+</ul>
+<h3 id="kurumların-yönettiği-bilgisayarlar">Kurumların yönettiği
+bilgisayarlar</h3>
+<p>Kurumun BT yönetimi ShiftSlice'ı Grup İlkesi ya da Intune ile
+yönetebilir: izinli giriş ve çıktı klasörleri, ağ paylaşımları, Terminal
+ve başlatıcı, pano, iş geçmişi, Windows'la başlama ve tek tek işlemler.
+Bu kurallar senin tercihlerinin önüne geçer ve Ayarlar'da bir uyarıyla
+gösterilir. Kurallar yalnız bilgisayarında okunur ve hiçbir yere
+gönderilmez.</p>
+<h3 id="paylaşım">Paylaşım</h3>
+<p>ShiftSlice verilerini kimseyle paylaşmaz, satmaz ve bize göndermez.
+Hesap, çerez, reklam kimliği ve konum kullanmaz.</p>
+<h2 id="bölüm-2-destek-yazışmaları">Bölüm 2: Destek yazışmaları</h2>
+<p>Bu bölüm yalnız bize kendi isteğinle e-posta yazdığında geçerlidir.
+Uygulama bize hiçbir şey göndermez; destek yazışması uygulamanın yerel
+işlemesinden tamamen ayrıdır.</p>
+<table>
+<thead>
+<tr>
+<th>Konu</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hangi veri</td>
+<td>Gönderdiğin e-posta: adın ve e-posta adresin (e-postanda
+görünüyorsa), iletinin içeriği, eklediğin dosyalar ve e-postanın tarih
+ve başlık bilgileri</td>
+</tr>
+<tr>
+<td>Amaç</td>
+<td>Sorunu anlamak, sana yanıt vermek, hatayı düzeltmek ve aynı
+yazışmanın devamını takip etmek. Pazarlama ya da başka bir amaçla
+kullanılmaz</td>
+</tr>
+<tr>
+<td>İşleme dayanağı</td>
+<td>Destek talebine yanıt vermekteki meşru menfaatimiz: 6698 sayılı KVKK
+m. 5/2(f) ve, Avrupa Ekonomik Alanı'ndaki kullanıcılar için, GDPR m.
+6(1)(f). Yazışma, senin e-posta göndermenle elektronik ortamda
+toplanır</td>
+</tr>
+<tr>
+<td>Hizmet sağlayıcı</td>
+<td>E-posta hizmetini Google (Gmail) sağlar. Yazışma Google'ın
+sunucularında saklanır ve Google'ın <a
+href="https://policies.google.com/privacy">gizlilik politikasına</a> da
+tabidir. Google'ın sunucuları Türkiye ve Avrupa Ekonomik Alanı dışında,
+örneğin ABD'de olabilir; e-postayı bu adrese göndermen yazışmanın bu
+sunuculara aktarılması sonucunu doğurur</td>
+</tr>
+<tr>
+<td>Paylaşım</td>
+<td>Yazışmayı Google'ın e-posta hizmeti dışında kimseyle paylaşmayız.
+Yasal bir zorunluluk olursa yalnız gereken kadarını yetkili makama
+veririz</td>
+</tr>
+<tr>
+<td>Saklama</td>
+<td>Yazışma kapandıktan (son iletiden ve sorunun çözülmesinden ya da
+yanıt beklenmediğinin anlaşılmasından) sonra en çok 12 ay saklanır,
+ardından silinir. Silme isteğinde bulunursan daha önce sileriz</td>
+</tr>
+<tr>
+<td>Senden beklenen</td>
+<td>Destek için dosya göndermen gerekmez. Göndereceksen gizli ya da
+kişisel bilgi içeren dosyaları önce çıkar</td>
+</tr>
+</tbody>
+</table>
+<p>Microsoft Store'daki puan ve yorumlar Microsoft tarafından işlenir ve
+Microsoft'un politikasına tabidir.</p>
+<h2 id="bölüm-3-bu-web-sitesi">Bölüm 3: Bu web sitesi</h2>
+<p>Bu sayfa GitHub Pages'te yayımlanır. GitHub, bir GitHub Pages sitesi
+ziyaret edildiğinde ziyaretçinin IP adresini, ziyaretçi GitHub'a giriş
+yapmış olsun ya da olmasın, güvenlik amacıyla kaydeder ve saklar. Bu
+kayıtlar GitHub'ın <a
+href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">genel
+gizlilik bildirimine</a> tabidir; bizim bu kayıtlara erişimimiz
+yoktur.</p>
+<p>Sayfanın kendisi çerez, betik, ziyaretçi sayacı, analiz aracı ya da
+dış kaynak (yazı tipi, görsel, stil dosyası) kullanmaz. Sayfadaki
+Microsoft, Google ve GitHub bağlantılarına tıklarsan o sitelerin
+politikaları geçerli olur.</p>
+<h2 id="bölüm-4-hakların-ve-değişiklikler">Bölüm 4: Hakların ve
+değişiklikler</h2>
+<h3 id="hakların">Hakların</h3>
+<p>ShiftSlice uygulamasının işlediği veriler bize ulaşmadığı için, bize
+yazmadıysan elimizde sana ait bir kayıt yoktur. Bilgisayarındaki
+kayıtları yukarıda anlatılan yerlerden kendin görebilir ve
+silebilirsin.</p>
+<p>Bize yazdıysan, 6698 sayılı KVKK m. 11 ve, Avrupa Ekonomik
+Alanı'ndaki kullanıcılar için, GDPR kapsamında şu haklara sahipsin:
+yazışmanın işlenip işlenmediğini ve nasıl işlendiğini öğrenmek, bir
+kopyasını almak, düzeltilmesini ya da silinmesini istemek, işlemeye
+itiraz etmek ve aktarıldığı tarafları öğrenmek. İsteğini <a
+href="mailto:furkanmertaks@gmail.com"><span>furkanmertaks@gmail.com</span></a>
+adresine, bize daha önce yazdığın e-posta adresinden gönderebilirsin. En
+geç 30 gün içinde yanıt veririz. Yanıtı yeterli bulmazsan Türkiye'de
+Kişisel Verileri Koruma Kurulu'na, Avrupa Ekonomik Alanı'nda kendi
+ülkenin veri koruma otoritesine başvurabilirsin.</p>
+<h3 id="çocuklar">Çocuklar</h3>
+<p>ShiftSlice çocuklardan bilerek veri toplamaz; uygulama kimseden veri
+toplamaz.</p>
+<h3 id="değişiklikler">Değişiklikler</h3>
+<p>Bu politika değişirse yeni metin bu adreste yayımlanır, politika
+sürümü ve yürürlük tarihi güncellenir. ShiftSlice'ın veri davranışını
+genişleten bir değişiklik (ör. isteğe bağlı bir ağ özelliği) olursa bu,
+uygulama içinde ve sürüm notlarında da duyurulur ve varsayılan olarak
+kapalı gelir.</p>
+<table>
+<thead>
+<tr>
+<th>Politika sürümü</th>
+<th>Tarih</th>
+<th>Değişiklik</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>9 Kasım 2026</td>
+<td>İlk yayın</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="en" lang="en">
+<h1>ShiftSlice privacy policy</h1>
+<p><strong>Effective date:</strong> 9 November 2026</p>
+<p><strong>Publisher (name shown in Microsoft Store):</strong> Mediaks
+Stüdyosu</p>
+<p><strong>Data controller:</strong> Furkan Mert Aksungur (individual
+developer who publishes ShiftSlice under the name Mediaks Stüdyosu)</p>
+<p><strong>Support and privacy contact:</strong> <a
+href="mailto:furkanmertaks@gmail.com"><span>furkanmertaks@gmail.com</span></a></p>
+<p><strong>Policy version:</strong> 1 (ShiftSlice 1.0.12 and later)</p>
+<p>This policy covers three separate things: how the ShiftSlice app
+processes your files on your computer, how your correspondence is
+handled when you email us, and the website this page is published on.
+They are separate: nothing the app processes reaches us; only an email
+you send reaches us.</p>
+<h2 id="in-short">In short</h2>
+<ul>
+<li>ShiftSlice converts your files only on your own computer. It needs
+no account, shows no ads and collects no usage analytics or crash
+reports.</li>
+<li>ShiftSlice's own code has no part that opens a network connection.
+It does not send your files, file names or records to us; we have no
+access to them.</li>
+<li>The records that stay on your computer (settings, the history of the
+last 20 jobs, a redacted log, temporary files) are described one by one
+below; you can see and delete all of them.</li>
+<li>If you email us for support, the correspondence is kept in Gmail and
+stored for at most 12 months after the conversation closes.</li>
+</ul>
+<h2 id="part-1-the-shiftslice-app">Part 1: The ShiftSlice app</h2>
+<h3 id="where-are-your-files-processed">Where are your files
+processed?</h3>
+<p>Only on your own computer. When you drop a file on a slice of the
+menu, ShiftSlice reads that file and applies the action you chose.</p>
+<ul>
+<li><strong>Output:</strong> written next to the source file or to the
+folder you chose in Settings → Output. The source file is not changed;
+only the <strong>Move</strong> action takes a file from its place.</li>
+<li><strong>Converters:</strong> the conversion is done by ShiftSlice's
+own code or by separate programs that ship with ShiftSlice: FFmpeg,
+Pandoc, Typst, PDFium, ImageMagick, LibreOffice Calc for spreadsheets
+and an OCCT-based converter for 3D models. Part of spreadsheet-to-PDF
+conversion is done inside ShiftSlice without a separate program. These
+programs run on your computer, with your user account's permissions, on
+the file ShiftSlice gives them. Calc opens on a separate, invisible
+desktop.</li>
+<li><strong>Auxiliary files:</strong> some files refer to other files:
+an image in a document, the tracks of a playlist, the parts of a 3D
+assembly. ShiftSlice uses only those in the same folder as the source
+file or its subfolders. References to an internet address, a network
+share or outside the folder are not read. The conversion then runs
+without those parts and says so in the notification, or does not run at
+all for safety.</li>
+</ul>
+<h3 id="network-connections">Network connections</h3>
+<p>ShiftSlice's own code has no internet connection, usage analytics,
+ads, crash reporting or update check. Even the site icons in the
+launcher are not downloaded; they are shown only if they already exist
+in the settings folder on your computer.</p>
+<p>The bundled converters are separate programs. When ShiftSlice starts
+them, it restricts their network access with these settings:</p>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Restriction applied</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FFmpeg and FFprobe</td>
+<td>Only local file and internal pipe protocols are allowed
+(<code>-protocol_whitelist file,pipe</code>). <code>http</code>,
+<code>https</code>, <code>rtmp</code> or <code>tcp</code> addresses in a
+playlist are not connected to</td>
+</tr>
+<tr>
+<td>Pandoc</td>
+<td>Runs in <code>--sandbox</code> mode; images and other files
+referenced by the document are not read. Remote resource references and
+embedded raw Typst code are removed before the document reaches
+Pandoc</td>
+</tr>
+<tr>
+<td>ImageMagick</td>
+<td>A security policy written by ShiftSlice turns off internet
+addresses, script formats and external helper programs</td>
+</tr>
+<tr>
+<td>LibreOffice Calc</td>
+<td>Opens with per-job settings: macros do not run, external links are
+not updated, and the internet proxy points to a closed local address
+(<code>127.0.0.1:9</code>)</td>
+</tr>
+<tr>
+<td>All external programs</td>
+<td>Proxy environment variables point to a closed local address
+(<code>127.0.0.1:9</code>). Typst's package folders are the job's
+temporary folder</td>
+</tr>
+</tbody>
+</table>
+<p>These restrictions are applied through each program's own settings;
+ShiftSlice does not add a Windows firewall rule. The Microsoft Store
+package manifest asks only for full-trust execution
+(<code>runFullTrust</code>); that permission neither grants nor blocks
+network access.</p>
+<p>Data can leave your computer only in these ways, each by your own
+action:</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Writing the output to a network folder or a synced folder (OneDrive
+etc.)</td>
+<td>The file goes to that folder's service and is subject to its policy.
+Organizations can turn network locations off</td>
+</tr>
+<tr>
+<td>Copying to the clipboard</td>
+<td>The text goes to the app you paste into</td>
+</tr>
+<tr>
+<td>Choosing a site slot in the launcher</td>
+<td>The site opens in your default browser; from there the browser's and
+the site's policies apply</td>
+</tr>
+<tr>
+<td>Opening an app slot or Terminal from the launcher</td>
+<td>That app runs under its own rules</td>
+</tr>
+<tr>
+<td>Installing and updating from Microsoft Store</td>
+<td>Microsoft Store downloads the install and updates. Data the Store
+collects is subject to the <a
+href="https://privacy.microsoft.com/">Microsoft Privacy Statement</a>.
+ShiftSlice takes no part in this traffic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="keyboard-and-mouse-listener">Keyboard and mouse listener</h3>
+<p><strong>What it accesses:</strong> to notice that you tapped Shift,
+Ctrl or Alt while dragging, ShiftSlice uses Windows' global keyboard and
+mouse listener. Windows passes every key event to this listener.
+ShiftSlice filters each key the moment it arrives:</p>
+<ul>
+<li>It recognizes left and right Shift, Ctrl, Alt and Esc, and the
+digits 1–8 while the launcher is open.</li>
+<li>It does not look at which other key was pressed; it turns every
+other key into a single "another key" signal. That signal keeps a typing
+gesture such as Shift+A from opening the menu.</li>
+<li>For the mouse it uses only the moment a drag starts and ends and the
+pointer position.</li>
+</ul>
+<p><strong>What is stored:</strong> no key, typed text, key history or
+pointer trail is written to disk or sent. In memory it keeps only the
+trigger keys held down at that moment.</p>
+<p><strong>How you control it:</strong> <strong>Pause gestures</strong>
+(Turkish: <em>Hareketleri duraklat</em>, in the tray panel and in
+Settings → General) stops menus from opening; the listener keeps running
+meanwhile but no menu opens. To turn the listener off completely, quit
+ShiftSlice from the tray. You can stop it from starting with Windows in
+Settings → General → <strong>Start with Windows session</strong>
+(<em>Windows oturumuyla başlat</em>).</p>
+<h3 id="screen-area-used-for-the-menus-frosted-background">Screen area
+used for the menu's frosted background</h3>
+<p><strong>What it accesses:</strong> when the menu or the launcher
+opens, ShiftSlice captures the square area around the pointer that the
+menu will cover, blurs it and shows it as the menu's translucent
+background. The rest of the screen is not captured.</p>
+<p><strong>What is stored:</strong> the image is kept only in memory,
+never written to disk or sent, and discarded when the menu closes. The
+menu preview in Settings uses colour bands drawn by the app, not your
+screen.</p>
+<p><strong>How you control it:</strong> the image is captured only while
+transparency effects are on in Windows. If you turn off Windows Settings
+→ Personalization → Colors → <strong>Transparency effects</strong>, the
+menu opens with an opaque surface and no screen image is taken.
+ShiftSlice's own settings have no separate option for this.</p>
+<h3 id="clipboard">Clipboard</h3>
+<p><strong>What it accesses:</strong> ShiftSlice writes to the clipboard
+only when you ask: <strong>Copy path</strong>, <strong>Copy
+name</strong>, <strong>SHA-256</strong> and <strong>Copy
+details</strong> on an error card. It never reads the clipboard.</p>
+<p><strong>What is stored:</strong> nothing. The written text stays on
+the clipboard under Windows' control.</p>
+<p><strong>How you control it:</strong> if you do not use these actions,
+nothing is written. On computers where the organization turned the
+clipboard off, these four actions are hidden and nothing is written.</p>
+<h3 id="job-history">Job history</h3>
+<p><strong>What is stored:</strong> for the last 20 jobs, the action
+name, input and output paths, time, and the outputs' size and hash for
+<strong>Undo</strong>; also a per-action use count to order the menu.
+File contents are not stored.</p>
+<p><strong>How you control it:</strong> only the latest 20 jobs are
+kept; older ones are deleted. Settings → General → Job history →
+<strong>Clear history</strong> (<em>Geçmişi temizle</em>) deletes the
+history and use counts immediately. When you <strong>Undo</strong> a job
+from the history, its outputs go to the Recycle Bin. On computers where
+the organization turned history off, it is never written to disk and is
+kept only in memory for that session.</p>
+<h3 id="temporary-files">Temporary files</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Content</th>
+<th>When it is deleted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Job's temporary folder</td>
+<td>Intermediate files in
+<code>%TEMP%\ShiftSlice\&lt;job number&gt;</code> during a conversion,
+and half-written <code>.shiftslice-…</code> files next to the
+output</td>
+<td>When the job finishes, is cancelled or fails. If the computer shuts
+down or a converter is killed mid-job, ShiftSlice deletes that job's
+partial files at its next start. It never touches the source file or
+completed outputs</td>
+</tr>
+<tr>
+<td>Work order</td>
+<td>A job's file paths and options, passed from the interface to the
+converter process</td>
+<td>When the job finishes</td>
+</tr>
+<tr>
+<td>Calc profile</td>
+<td>LibreOffice Calc's per-job settings folder for spreadsheet
+conversions, inside the job's temporary folder. Contains no document
+content</td>
+<td>Together with the job folder</td>
+</tr>
+<tr>
+<td>Preview</td>
+<td>A PNG in <code>%TEMP%\ShiftSlice</code> while the crop and
+background editors open</td>
+<td>Once the image is loaded into the window</td>
+</tr>
+<tr>
+<td>PDF preview</td>
+<td>PNG page images of a spreadsheet PDF in
+<code>%TEMP%\ShiftSlice\onizleme-…</code>. If you do not press
+<strong>Save</strong>, the PDF itself goes to the Recycle Bin</td>
+<td>When the preview window closes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other-records-on-your-computer">Other records on your
+computer</h3>
+<table>
+<thead>
+<tr>
+<th>Record</th>
+<th>Content</th>
+<th>When it is deleted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Settings</td>
+<td>Your keys, appearance choices, enabled/disabled actions, app paths
+and site addresses you added to the launcher, pinned folders, block
+list</td>
+<td>Until you change or delete them</td>
+</tr>
+<tr>
+<td>Log</td>
+<td>Start line (version, package type), job result and error type. File
+and folder paths, file names and addresses are replaced with
+<code>&lt;yol&gt;</code>, <code>&lt;ad&gt;</code>,
+<code>&lt;adres&gt;</code> before writing. Keys, file contents and
+screenshots are never written</td>
+<td>At most 2 × 1 MB. Logs older than 30 days are deleted at start</td>
+</tr>
+<tr>
+<td>Image engine setting</td>
+<td>ImageMagick's security rules (two small XML files). No personal
+data</td>
+<td>Rewritten at every start</td>
+</tr>
+</tbody>
+</table>
+<p>If ShiftSlice finds the profile of a version used under its previous
+name, it copies its settings, job history and site icons to the new
+profile at first start. It does not delete or change the old files.</p>
+<h3 id="where-data-is-kept-and-uninstalling">Where data is kept and
+uninstalling</h3>
+<table>
+<thead>
+<tr>
+<th>Edition</th>
+<th>Settings and job history</th>
+<th>Log and image engine setting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft Store (MSIX)</td>
+<td><code>%LOCALAPPDATA%\Packages\&lt;ShiftSlice package family&gt;\LocalCache\Roaming\ShiftSlice</code></td>
+<td><code>%LOCALAPPDATA%\Packages\&lt;ShiftSlice package family&gt;\LocalCache\Local\ShiftSlice</code></td>
+</tr>
+<tr>
+<td>ZIP</td>
+<td><code>%APPDATA%\ShiftSlice</code></td>
+<td><code>%LOCALAPPDATA%\ShiftSlice</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>In the Store edition, Windows redirects these folders to
+ShiftSlice's own package data folder
+(<code>%LOCALAPPDATA%\Packages\&lt;ShiftSlice package family&gt;</code>).
+When Windows removes an MSIX package, it also removes that package's
+data folder; settings, job history and log are in that folder.</li>
+<li>The output files ShiftSlice produced are your files, stay where you
+chose and are not deleted on uninstall.</li>
+<li>Temporary files (<code>%TEMP%\ShiftSlice</code>) are not documented
+as part of the package data folder. ShiftSlice deletes them at the end
+of a job or at its next start. If you uninstall while a job was left
+unfinished, you can delete that folder yourself.</li>
+<li>For the ZIP edition you can delete the folders above yourself.</li>
+</ul>
+<h3 id="organization-managed-computers">Organization-managed
+computers</h3>
+<p>An organization's IT can manage ShiftSlice with Group Policy or
+Intune: allowed input and output folders, network shares, Terminal and
+the launcher, the clipboard, job history, starting with Windows, and
+individual actions. These rules take precedence over your preferences
+and are shown with a notice in Settings. They are read only on your
+computer and sent nowhere.</p>
+<h3 id="sharing">Sharing</h3>
+<p>ShiftSlice does not share, sell or send your data to anyone,
+including us. It uses no account, cookies, advertising ID or
+location.</p>
+<h2 id="part-2-support-correspondence">Part 2: Support
+correspondence</h2>
+<p>This part applies only when you choose to email us. The app sends us
+nothing; support correspondence is entirely separate from the app's
+local processing.</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What data</td>
+<td>The email you send: your name and email address (as shown in your
+email), the message, any attachments, and the email's date and header
+information</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To understand the problem, answer you, fix the bug and follow up on
+the same conversation. Not used for marketing or any other purpose</td>
+</tr>
+<tr>
+<td>Legal basis</td>
+<td>Our legitimate interest in answering support requests: Article
+5(2)(f) of Türkiye's Personal Data Protection Law No. 6698 (KVKK) and,
+for users in the European Economic Area, Article 6(1)(f) GDPR. The
+correspondence is collected electronically when you send the email</td>
+</tr>
+<tr>
+<td>Service provider</td>
+<td>Email is provided by Google (Gmail). The correspondence is stored on
+Google's servers and is also subject to Google's <a
+href="https://policies.google.com/privacy">privacy policy</a>. Google's
+servers may be outside Türkiye and the European Economic Area, for
+example in the United States; sending email to this address results in
+the correspondence being transferred to those servers</td>
+</tr>
+<tr>
+<td>Sharing</td>
+<td>We do not share the correspondence with anyone other than Google's
+email service. If the law requires it, we give only what is necessary to
+the competent authority</td>
+</tr>
+<tr>
+<td>Retention</td>
+<td>Kept for at most 12 months after the conversation closes (after the
+last message and once the problem is solved or no reply is expected),
+then deleted. If you ask for deletion, we delete it sooner</td>
+</tr>
+<tr>
+<td>What we ask of you</td>
+<td>You do not need to send files for support. If you do, remove
+confidential or personal content first</td>
+</tr>
+</tbody>
+</table>
+<p>Ratings and reviews in Microsoft Store are processed by Microsoft
+under Microsoft's policy.</p>
+<h2 id="part-3-this-website">Part 3: This website</h2>
+<p>This page is published on GitHub Pages. When a GitHub Pages site is
+visited, GitHub logs and stores the visitor's IP address for security
+purposes, whether or not the visitor is signed in to GitHub. These logs
+are subject to GitHub's <a
+href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">General
+Privacy Statement</a>; we have no access to them.</p>
+<p>The page itself uses no cookies, scripts, visitor counters, analytics
+or external resources (fonts, images, stylesheets). If you follow the
+Microsoft, Google or GitHub links on this page, those sites' policies
+apply.</p>
+<h2 id="part-4-your-rights-and-changes">Part 4: Your rights and
+changes</h2>
+<h3 id="your-rights">Your rights</h3>
+<p>Because the data the ShiftSlice app processes never reaches us, we
+hold no record about you unless you wrote to us. You can see and delete
+the records on your computer at the locations described above.</p>
+<p>If you wrote to us, you have these rights under Article 11 KVKK and,
+for users in the European Economic Area, the GDPR: to learn whether and
+how your correspondence is processed, to get a copy, to ask for
+correction or deletion, to object to the processing and to learn who it
+was transferred to. Send your request to <a
+href="mailto:furkanmertaks@gmail.com"><span>furkanmertaks@gmail.com</span></a>
+from the email address you used to write to us. We answer within 30 days
+at the latest. If you are not satisfied with the answer, you can
+complain to the Personal Data Protection Board (Kişisel Verileri Koruma
+Kurulu) in Türkiye or to your country's data protection authority in the
+European Economic Area.</p>
+<h3 id="children">Children</h3>
+<p>ShiftSlice does not knowingly collect data from children; the app
+collects no data from anyone.</p>
+<h3 id="changes">Changes</h3>
+<p>If this policy changes, the new text is published at this address and
+the policy version and effective date are updated. A change that widens
+ShiftSlice's data behaviour (for example an optional network feature) is
+also announced in the app and in the release notes, and ships turned
+off.</p>
+<table>
+<thead>
+<tr>
+<th>Policy version</th>
+<th>Date</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>9 November 2026</td>
+<td>First publication</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+</main>
+</body>
+</html>
