@@ -25,14 +25,14 @@ section + section { margin-top: 4rem; border-top: 3px solid var(--line); padding
 <nav><a href="#tr">Türkçe</a><a href="#en">English</a></nav>
 <section id="tr" lang="tr">
 <h1>ShiftSlice gizlilik politikası</h1>
-<p><strong>Yürürlük tarihi:</strong> 9 Kasım 2026</p>
+<p><strong>Yürürlük tarihi:</strong> 13 Kasım 2026</p>
 <p><strong>Yayıncı (Microsoft Store'da görünen ad):</strong> Mediaks
 Stüdyosu</p>
 <p><strong>Veri sorumlusu:</strong> Furkan Mert Aksungur (ShiftSlice'ı
 Mediaks Stüdyosu adıyla yayımlayan bireysel geliştirici)</p>
 <p><strong>Destek ve gizlilik iletişimi:</strong> <a
 href="mailto:furkanmertaks@gmail.com"><span>furkanmertaks@gmail.com</span></a></p>
-<p><strong>Politika sürümü:</strong> 1 (ShiftSlice 1.0.12 ve
+<p><strong>Politika sürümü:</strong> 2 (ShiftSlice 1.0.13 ve
 sonrası)</p>
 <p>Bu politika üç ayrı konuyu anlatır: ShiftSlice uygulamasının
 dosyalarını bilgisayarında nasıl işlediği, bize e-postayla yazdığında
@@ -47,6 +47,10 @@ toplamaz.</li>
 <li>ShiftSlice'ın kendi kodunda ağ bağlantısı kuran bir bölüm yoktur.
 Dosyalarını, dosya adlarını ya da kayıtlarını bize göndermez; bunlara
 erişimimiz yoktur.</li>
+<li>Deneme sürümünün bitip bitmediğini öğrenmek için ShiftSlice,
+Windows'un Microsoft Store bileşenine lisans durumunu sorar. Bu soruyu
+Windows, Microsoft Store'a iletir; içinde dosyaların ya da dosya adların
+yoktur.</li>
 <li>Bilgisayarında kalan kayıtlar (ayarlar, son 20 işin geçmişi,
 ayıklanmış günlük, geçici dosyalar) aşağıda tek tek anlatılmıştır;
 hepsini görebilir ve silebilirsin.</li>
@@ -83,6 +87,24 @@ güvenlik için hiç yapılmaz.</li>
 reklam, çökme raporu ya da güncelleme denetimi yoktur. Başlatıcıdaki
 site simgeleri bile internetten indirilmez; yalnız bilgisayarındaki ayar
 klasöründe varsa gösterilir.</p>
+<p><strong>Microsoft Store lisans denetimi.</strong> ShiftSlice'ın
+ücretsiz deneme sürümü vardır.</p>
+<ul>
+<li><strong>Ne sorulur:</strong> ShiftSlice açılışta, altı saatte bir ve
+deneme süresi bittikten sonra her dosya işleminden önce, Windows'un
+Microsoft Store bileşenine (StoreContext) lisansın durumunu sorar.
+Lisans satın alınmış mı, deneme mi, denemenin ne kadarı kaldı?</li>
+<li><strong>Bağlantıyı kim kurar:</strong> Bağlantıyı ShiftSlice değil
+Windows kurar. Windows bu bilgiyi kendi önbelleğinden ya da Microsoft
+Store'dan alır; Store'dan alınan her uygulama için bu işlem aynıdır.
+İsteğe dosyaların, dosya adların, ayarların ya da iş geçmişin girmez.
+Microsoft bu bilgiyi kendi gizlilik bildirimine göre işler.</li>
+<li><strong>ShiftSlice ne tutar:</strong> Lisans durumunu yalnız
+uygulama açıkken bellekte tutar ve günlüğe "deneme, bitiş tarihi" olarak
+yazar. Bu bilgi bize gelmez.</li>
+<li><strong>Satın alma:</strong> Microsoft Store'un kendi sayfasında
+yapılır; ödeme bilgisini ShiftSlice ve biz görmeyiz.</li>
+</ul>
 <p>Birlikte gelen dönüştürücüler ayrı programlardır. ShiftSlice onları
 başlatırken ağ erişimini şu ayarlarla kısıtlar:</p>
 <table>
@@ -474,20 +496,26 @@ kapalı gelir.</p>
 <td>9 Kasım 2026</td>
 <td>İlk yayın</td>
 </tr>
+<tr>
+<td>2</td>
+<td>13 Kasım 2026</td>
+<td>Microsoft Store deneme sürümü: Windows üzerinden lisans durumu
+denetimi eklendi</td>
+</tr>
 </tbody>
 </table>
 
 </section>
 <section id="en" lang="en">
 <h1>ShiftSlice privacy policy</h1>
-<p><strong>Effective date:</strong> 9 November 2026</p>
+<p><strong>Effective date:</strong> 13 November 2026</p>
 <p><strong>Publisher (name shown in Microsoft Store):</strong> Mediaks
 Stüdyosu</p>
 <p><strong>Data controller:</strong> Furkan Mert Aksungur (individual
 developer who publishes ShiftSlice under the name Mediaks Stüdyosu)</p>
 <p><strong>Support and privacy contact:</strong> <a
 href="mailto:furkanmertaks@gmail.com"><span>furkanmertaks@gmail.com</span></a></p>
-<p><strong>Policy version:</strong> 1 (ShiftSlice 1.0.12 and later)</p>
+<p><strong>Policy version:</strong> 2 (ShiftSlice 1.0.13 and later)</p>
 <p>This policy covers three separate things: how the ShiftSlice app
 processes your files on your computer, how your correspondence is
 handled when you email us, and the website this page is published on.
@@ -501,6 +529,10 @@ reports.</li>
 <li>ShiftSlice's own code has no part that opens a network connection.
 It does not send your files, file names or records to us; we have no
 access to them.</li>
+<li>To find out whether the free trial has ended, ShiftSlice asks the
+Microsoft Store component of Windows for its license status. Windows
+passes this question to the Microsoft Store; it contains none of your
+files or file names.</li>
 <li>The records that stay on your computer (settings, the history of the
 last 20 jobs, a redacted log, temporary files) are described one by one
 below; you can see and delete all of them.</li>
@@ -537,6 +569,27 @@ all for safety.</li>
 ads, crash reporting or update check. Even the site icons in the
 launcher are not downloaded; they are shown only if they already exist
 in the settings folder on your computer.</p>
+<p><strong>Microsoft Store license check.</strong> ShiftSlice has a free
+trial.</p>
+<ul>
+<li><strong>What is asked:</strong> At start-up, every six hours, and
+after the trial has ended before each file action, ShiftSlice asks the
+Microsoft Store component of Windows (StoreContext) for the license
+status. Has the license been purchased, is it a trial, and how much of
+the trial is left?</li>
+<li><strong>Who connects:</strong> Windows, not ShiftSlice, makes the
+connection. Windows answers from its own cache or from the Microsoft
+Store; this works the same way for every app acquired from the Store.
+The request contains none of your files, file names, settings or job
+history. Microsoft processes this information under its own privacy
+statement.</li>
+<li><strong>What ShiftSlice keeps:</strong> ShiftSlice keeps the license
+status only in memory while the app is running and writes it to the log
+as "trial, end date". This information does not reach us.</li>
+<li><strong>Purchase:</strong> Purchases are made on the Microsoft
+Store's own page; neither ShiftSlice nor we see your payment
+details.</li>
+</ul>
 <p>The bundled converters are separate programs. When ShiftSlice starts
 them, it restricts their network access with these settings:</p>
 <table>
@@ -931,6 +984,12 @@ off.</p>
 <td>1</td>
 <td>9 November 2026</td>
 <td>First publication</td>
+</tr>
+<tr>
+<td>2</td>
+<td>13 November 2026</td>
+<td>Microsoft Store free trial: license status check through Windows
+added</td>
 </tr>
 </tbody>
 </table>
