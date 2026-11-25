@@ -25,14 +25,16 @@ section + section { margin-top: 4rem; border-top: 3px solid var(--line); padding
 <nav><a href="#tr">Türkçe</a><a href="#en">English</a></nav>
 <section id="tr" lang="tr">
 <h1>ShiftSlice gizlilik politikası</h1>
-<p><strong>Yürürlük tarihi:</strong> 13 Kasım 2026</p>
+<p><strong>Yürürlük tarihi:</strong> 25 Kasım 2026</p>
 <p><strong>Yayıncı (Microsoft Store'da görünen ad):</strong> Mediaks
 Stüdyosu</p>
 <p><strong>Veri sorumlusu:</strong> Furkan Mert Aksungur (ShiftSlice'ı
 Mediaks Stüdyosu adıyla yayımlayan bireysel geliştirici)</p>
-<p><strong>Destek ve gizlilik iletişimi:</strong> <a
+<p><strong>Gizlilik iletişimi:</strong> <a
 href="mailto:furkanmertaks@gmail.com"><span>furkanmertaks@gmail.com</span></a></p>
-<p><strong>Politika sürümü:</strong> 2 (ShiftSlice 1.0.13 ve
+<p><strong>Uygulama desteği:</strong> <a
+href="mailto:webmediaks@gmail.com"><span>webmediaks@gmail.com</span></a></p>
+<p><strong>Politika sürümü:</strong> 3 (ShiftSlice 1.0.24 ve
 sonrası)</p>
 <p>Bu politika üç ayrı konuyu anlatır: ShiftSlice uygulamasının
 dosyalarını bilgisayarında nasıl işlediği, bize e-postayla yazdığında
@@ -68,12 +70,32 @@ bıraktığında ShiftSlice o dosyayı okur ve seçtiğin işlemi uygular.</p>
 <strong>Taşı</strong> işlemi dosyayı yerinden alır.</li>
 <li><strong>Dönüştürücüler:</strong> Dönüşümü ShiftSlice'ın kendi kodu
 ya da ShiftSlice'la birlikte gelen ayrı programlar yapar: FFmpeg,
-Pandoc, Typst, PDFium, ImageMagick, tablolar için LibreOffice Calc ve 3B
-modeller için OCCT tabanlı bir dönüştürücü. Tablodan PDF'in bir bölümü
-ShiftSlice'ın içinde, ayrı program olmadan üretilir. Bu programlar
-bilgisayarında, senin kullanıcı hesabının yetkileriyle ve ShiftSlice'ın
-verdiği dosya üzerinde çalışır. Calc görünmeyen ayrı bir masaüstünde
-açılır.</li>
+Pandoc, Typst, PDFium, ImageMagick, belge, sunum ve tablolar için
+LibreOffice ve 3B modeller için OCCT tabanlı bir dönüştürücü. Tablodan
+PDF'in bir bölümü ShiftSlice'ın içinde, ayrı program olmadan üretilir.
+Bu programlar bilgisayarında, senin kullanıcı hesabının yetkileriyle ve
+ShiftSlice'ın verdiği dosya üzerinde çalışır. LibreOffice görünmeyen
+ayrı bir masaüstünde açılır ve yazıcılarını sorgulamaz.</li>
+<li><strong>Windows'un kendi motorları:</strong> Yazı tanıma (OCR),
+sesli okuma ve vesikalık fotoğrafta yüz bulma, Windows'ta kurulu cihaz
+üstü bileşenlerle (Windows.Media.Ocr, Windows.Media.SpeechSynthesis,
+Windows.Media.FaceAnalysis) yapılır. Görüntü ve metin yalnız
+bilgisayarındaki bu bileşenlere verilir. Yüz bulma yalnız yüzün yerini
+verir; kim olduğunu tanımaz ve yüz verisi saklamaz.</li>
+<li><strong>Sertifikalar:</strong> PDF imzalarken ShiftSlice yalnız
+senin seçtiğin sertifika dosyasını ya da Windows sertifika deposundaki
+sertifikayı kullanır. Gizli anahtar dışarı aktarılmaz ve saklanmaz.
+Kendi sertifikanı oluşturursan, anahtarıyla birlikte verdiğin parolayla
+korunan bir <code>.pfx</code> dosyası çıktının yanına yazılır; bu dosya
+senindir. Zaman damgası alınmaz, iptal listesi ve sertifika indirilmez.
+Windows'un güvendiği kök sertifikaların listesi Windows'un
+yönetimindedir.</li>
+<li><strong>Parolalar:</strong> PDF, sertifika ve Wi-Fi parolaları iş
+emrine, günlüğe ve iş geçmişine yazılmaz; dönüştürücü sürecine yalnız
+bellekte geçer. QR koda yazdırdığın Wi-Fi parolası, kodun kendisinin
+içindedir.</li>
+<li><strong>İmza çizimi:</strong> Çizdiğin imza geçici bir resimdir; iş
+bitince silinir. Başka belgelerde kullanılmak üzere saklanmaz.</li>
 <li><strong>Yardımcı dosyalar:</strong> Bazı dosyalar başka dosyalara
 başvurur: bir belgedeki görsel, bir çalma listesindeki şarkılar, bir 3B
 montajdaki parçalar. ShiftSlice bunlardan yalnız kaynak dosyayla aynı
@@ -134,7 +156,7 @@ ve gömülü ham Typst kodu çıkarılır</td>
 biçimlerini ve dış yardımcı programları kapatır</td>
 </tr>
 <tr>
-<td>LibreOffice Calc</td>
+<td>LibreOffice</td>
 <td>İşe özel ayarlarla açılır: makrolar çalışmaz, dış bağlantılar
 güncellenmez, internet vekili kapalı bir yerel adrese
 (<code>127.0.0.1:9</code>) yönlenir</td>
@@ -171,6 +193,18 @@ Kurum ağ konumlarını kapatabilir</td>
 <tr>
 <td>Panoya kopyalamak</td>
 <td>Panodaki metin, yapıştırdığın uygulamaya gider</td>
+</tr>
+<tr>
+<td>Destek bölümünden e-posta açmak</td>
+<td>Yazdığın mesaj kendi e-posta uygulamanda ya da tarayıcıdaki Gmail'de
+hazır açılır; göndermeye sen karar verirsin. Yalnız sen açık bırakırsan
+ShiftSlice ve Windows sürümü, ekran boyutu ve dil satırı eklenir. Dosya,
+dosya adı ya da günlük eklenmez</td>
+</tr>
+<tr>
+<td>QR kodu, imzalı ya da dönüştürülmüş bir dosyayı başkasına
+vermek</td>
+<td>Dosyanın içindekiler o kişiye gider</td>
 </tr>
 <tr>
 <td>Başlatıcıdaki bir site yuvasını seçmek</td>
@@ -228,15 +262,20 @@ Renkler → <strong>Saydamlık efektleri</strong>'ni kapatırsan menü opak
 bir yüzeyle açılır ve ekran görüntüsü alınmaz. ShiftSlice'ın kendi
 ayarlarında bunu kapatan ayrı bir seçenek yoktur.</p>
 <h3 id="pano">Pano</h3>
-<p><strong>Neye erişir:</strong> ShiftSlice panoya yalnız sen
-istediğinde yazar: <strong>Yolu kopyala</strong>, <strong>Adı
-kopyala</strong>, <strong>SHA-256</strong> ve hata kartındaki
-<strong>Ayrıntıyı kopyala</strong>. Panonun içeriğini hiç okumaz.</p>
+<p><strong>Neye erişir:</strong> ShiftSlice panoya yalnız senin
+başlattığın şu işlemlerde yazar: <strong>Yolu kopyala</strong>,
+<strong>Adı kopyala</strong>, <strong>SHA-256</strong>, <strong>Dosya
+özeti</strong>, <strong>Base64'e çevir</strong> (kısa dosyalarda),
+<strong>Yazıyı oku (OCR)</strong> ile okunan metin, <strong>Renk
+paleti</strong> kodları, hata kartındaki <strong>Ayrıntıyı
+kopyala</strong> ve Destek bölümünde mesajın ya da adresin kopyalanması.
+Panonun içeriğini hiç okumaz.</p>
 <p><strong>Ne saklanır:</strong> Hiçbir şey. Yazılan metin panoda
 Windows'un yönetiminde kalır.</p>
 <p><strong>Nasıl yönetirsin:</strong> Bu işlemleri kullanmazsan panoya
-yazılmaz. Kurumun panoyu kapattığı bilgisayarlarda bu dört işlem
-görünmez ve panoya hiçbir şey yazılmaz.</p>
+yazılmaz. Kurumun panoyu kapattığı bilgisayarlarda panoya hiçbir şey
+yazılmaz; yalnız panoya kopyalayan işlemler görünmez, diğerleri sonucunu
+dosyaya yazar.</p>
 <h3 id="i̇ş-geçmişi">İş geçmişi</h3>
 <p><strong>Ne saklanır:</strong> Son 20 işin işlem adı, girdi ve çıktı
 dosyalarının yolları, zamanı ve <strong>Geri al</strong> için çıktıların
@@ -270,15 +309,29 @@ tamamlanmış çıktılara dokunmaz</td>
 </tr>
 <tr>
 <td>İş emri</td>
-<td>Bir işin dosya yolları ve seçenekleri; arayüzden dönüştürücü
-sürecine aktarılır</td>
+<td>Bir işin dosya yolları ve seçenekleri (parolalar hariç); arayüzden
+dönüştürücü sürecine aktarılır</td>
 <td>İş bitince</td>
 </tr>
 <tr>
-<td>Calc profili</td>
-<td>Tablo dönüşümünde LibreOffice Calc'ın işe özel ayar klasörü, işin
-geçici klasöründe. Belge içeriği içermez</td>
+<td>LibreOffice profili</td>
+<td>Belge, sunum ve tablo dönüşümünde LibreOffice'in işe özel ayar
+klasörü, işin geçici klasöründe. Belge içeriği içermez</td>
 <td>İş klasörüyle birlikte</td>
+</tr>
+<tr>
+<td>PDF düzenleyicisi</td>
+<td>Açık sayfaların görüntüleri
+<code>%TEMP%\ShiftSlice\pdf-editor-…</code> içinde; kaydettiğinde
+yaptığın değişiklikleri (yazdığın metinler dahil) taşıyan plan
+<code>pdf-plan</code> içinde</td>
+<td>Görüntüler pencere kapanınca, plan iş bitince. Uygulama zorla
+kapatılırsa kalanlar sonraki açılışta</td>
+</tr>
+<tr>
+<td>İmza çizimi</td>
+<td>Çizdiğin imzanın resmi, <code>%TEMP%\ShiftSlice</code> içinde</td>
+<td>İş bitince; zorla kapatılırsa sonraki açılışta</td>
 </tr>
 <tr>
 <td>Önizleme</td>
@@ -385,6 +438,7 @@ gönderilmez.</p>
 Hesap, çerez, reklam kimliği ve konum kullanmaz.</p>
 <h2 id="bölüm-2-destek-yazışmaları">Bölüm 2: Destek yazışmaları</h2>
 <p>Bu bölüm yalnız bize kendi isteğinle e-posta yazdığında geçerlidir.
+Uygulamadaki Destek bölümü de yalnız kendi e-posta uygulamanı açar.
 Uygulama bize hiçbir şey göndermez; destek yazışması uygulamanın yerel
 işlemesinden tamamen ayrıdır.</p>
 <table>
@@ -502,20 +556,30 @@ kapalı gelir.</p>
 <td>Microsoft Store deneme sürümü: Windows üzerinden lisans durumu
 denetimi eklendi</td>
 </tr>
+<tr>
+<td>3</td>
+<td>25 Kasım 2026</td>
+<td>Yeni araçlar: Windows'un cihaz üstü OCR, ses ve yüz bulma motorları,
+sertifikayla imzalama, imza çizimi; panoya yazan işlemler ve geçici
+dosyalar listesi genişletildi; LibreOffice belge ve sunumlarda da
+kullanılır; uygulama içi Destek bölümü. Ağ davranışı değişmedi</td>
+</tr>
 </tbody>
 </table>
 
 </section>
 <section id="en" lang="en">
 <h1>ShiftSlice privacy policy</h1>
-<p><strong>Effective date:</strong> 13 November 2026</p>
+<p><strong>Effective date:</strong> 25 November 2026</p>
 <p><strong>Publisher (name shown in Microsoft Store):</strong> Mediaks
 Stüdyosu</p>
 <p><strong>Data controller:</strong> Furkan Mert Aksungur (individual
 developer who publishes ShiftSlice under the name Mediaks Stüdyosu)</p>
-<p><strong>Support and privacy contact:</strong> <a
+<p><strong>Privacy contact:</strong> <a
 href="mailto:furkanmertaks@gmail.com"><span>furkanmertaks@gmail.com</span></a></p>
-<p><strong>Policy version:</strong> 2 (ShiftSlice 1.0.13 and later)</p>
+<p><strong>App support:</strong> <a
+href="mailto:webmediaks@gmail.com"><span>webmediaks@gmail.com</span></a></p>
+<p><strong>Policy version:</strong> 3 (ShiftSlice 1.0.24 and later)</p>
 <p>This policy covers three separate things: how the ShiftSlice app
 processes your files on your computer, how your correspondence is
 handled when you email us, and the website this page is published on.
@@ -550,12 +614,34 @@ folder you chose in Settings → Output. The source file is not changed;
 only the <strong>Move</strong> action takes a file from its place.</li>
 <li><strong>Converters:</strong> the conversion is done by ShiftSlice's
 own code or by separate programs that ship with ShiftSlice: FFmpeg,
-Pandoc, Typst, PDFium, ImageMagick, LibreOffice Calc for spreadsheets
-and an OCCT-based converter for 3D models. Part of spreadsheet-to-PDF
-conversion is done inside ShiftSlice without a separate program. These
-programs run on your computer, with your user account's permissions, on
-the file ShiftSlice gives them. Calc opens on a separate, invisible
-desktop.</li>
+Pandoc, Typst, PDFium, ImageMagick, LibreOffice for documents,
+presentations and spreadsheets, and an OCCT-based converter for 3D
+models. Part of spreadsheet-to-PDF conversion is done inside ShiftSlice
+without a separate program. These programs run on your computer, with
+your user account's permissions, on the file ShiftSlice gives them.
+LibreOffice opens on a separate, invisible desktop and does not query
+your printers.</li>
+<li><strong>Windows' own engines:</strong> text recognition (OCR), read
+aloud and finding the face in an ID photo use on-device components
+installed in Windows (Windows.Media.Ocr, Windows.Media.SpeechSynthesis,
+Windows.Media.FaceAnalysis). Images and text are given only to these
+components on your computer. Face detection returns only where the face
+is; it does not identify anyone and keeps no face data.</li>
+<li><strong>Certificates:</strong> when signing a PDF, ShiftSlice uses
+only the certificate file you choose or a certificate in the Windows
+certificate store. The private key is not exported or stored. If you
+create your own certificate, a <code>.pfx</code> file holding its key
+and protected with the password you give is written next to the output;
+that file is yours. No timestamp is obtained, and no revocation list or
+certificate is downloaded. The list of root certificates Windows trusts
+is managed by Windows.</li>
+<li><strong>Passwords:</strong> PDF, certificate and Wi-Fi passwords are
+not written to the work order, the log or the job history; they reach
+the converter process only in memory. A Wi-Fi password you put in a QR
+code is inside the code itself.</li>
+<li><strong>Drawn signature:</strong> the signature you draw is a
+temporary image, deleted when the job finishes. It is not kept for use
+in other documents.</li>
 <li><strong>Auxiliary files:</strong> some files refer to other files:
 an image in a document, the tracks of a playlist, the parts of a 3D
 assembly. ShiftSlice uses only those in the same folder as the source
@@ -620,7 +706,7 @@ Pandoc</td>
 addresses, script formats and external helper programs</td>
 </tr>
 <tr>
-<td>LibreOffice Calc</td>
+<td>LibreOffice</td>
 <td>Opens with per-job settings: macros do not run, external links are
 not updated, and the internet proxy points to a closed local address
 (<code>127.0.0.1:9</code>)</td>
@@ -657,6 +743,17 @@ Organizations can turn network locations off</td>
 <tr>
 <td>Copying to the clipboard</td>
 <td>The text goes to the app you paste into</td>
+</tr>
+<tr>
+<td>Opening an email from the Support section</td>
+<td>Your message opens ready in your own email app or in Gmail in the
+browser; you decide whether to send it. Only if you leave it on, a line
+with the ShiftSlice and Windows versions, screen size and language is
+added. No file, file name or log is attached</td>
+</tr>
+<tr>
+<td>Giving someone a QR code or a signed or converted file</td>
+<td>What is in the file goes to that person</td>
 </tr>
 <tr>
 <td>Choosing a site slot in the launcher</td>
@@ -717,14 +814,19 @@ menu opens with an opaque surface and no screen image is taken.
 ShiftSlice's own settings have no separate option for this.</p>
 <h3 id="clipboard">Clipboard</h3>
 <p><strong>What it accesses:</strong> ShiftSlice writes to the clipboard
-only when you ask: <strong>Copy path</strong>, <strong>Copy
-name</strong>, <strong>SHA-256</strong> and <strong>Copy
-details</strong> on an error card. It never reads the clipboard.</p>
+only in these actions you start: <strong>Copy path</strong>,
+<strong>Copy name</strong>, <strong>SHA-256</strong>, <strong>File
+hash</strong>, <strong>To Base64</strong> (short files), the text read
+by <strong>Read text (OCR)</strong>, <strong>Color palette</strong>
+codes, <strong>Copy details</strong> on an error card, and copying the
+message or address in the Support section. It never reads the
+clipboard.</p>
 <p><strong>What is stored:</strong> nothing. The written text stays on
 the clipboard under Windows' control.</p>
 <p><strong>How you control it:</strong> if you do not use these actions,
 nothing is written. On computers where the organization turned the
-clipboard off, these four actions are hidden and nothing is written.</p>
+clipboard off, nothing is written to the clipboard; actions that only
+copy are hidden, the others write their result to a file.</p>
 <h3 id="job-history">Job history</h3>
 <p><strong>What is stored:</strong> for the last 20 jobs, the action
 name, input and output paths, time, and the outputs' size and hash for
@@ -760,16 +862,30 @@ completed outputs</td>
 </tr>
 <tr>
 <td>Work order</td>
-<td>A job's file paths and options, passed from the interface to the
-converter process</td>
+<td>A job's file paths and options (except passwords), passed from the
+interface to the converter process</td>
 <td>When the job finishes</td>
 </tr>
 <tr>
-<td>Calc profile</td>
-<td>LibreOffice Calc's per-job settings folder for spreadsheet
-conversions, inside the job's temporary folder. Contains no document
-content</td>
+<td>LibreOffice profile</td>
+<td>LibreOffice's per-job settings folder for document, presentation and
+spreadsheet conversions, inside the job's temporary folder. Contains no
+document content</td>
 <td>Together with the job folder</td>
+</tr>
+<tr>
+<td>PDF editor</td>
+<td>Images of the open pages in
+<code>%TEMP%\ShiftSlice\pdf-editor-…</code>; when you save, a plan with
+your changes (including text you typed) in <code>pdf-plan</code></td>
+<td>Images when the window closes, the plan when the job finishes. If
+the app is killed, leftovers at the next start</td>
+</tr>
+<tr>
+<td>Drawn signature</td>
+<td>The image of the signature you drew, in
+<code>%TEMP%\ShiftSlice</code></td>
+<td>When the job finishes; if killed, at the next start</td>
 </tr>
 <tr>
 <td>Preview</td>
@@ -875,7 +991,8 @@ including us. It uses no account, cookies, advertising ID or
 location.</p>
 <h2 id="part-2-support-correspondence">Part 2: Support
 correspondence</h2>
-<p>This part applies only when you choose to email us. The app sends us
+<p>This part applies only when you choose to email us. The Support
+section in the app also only opens your own email app. The app sends us
 nothing; support correspondence is entirely separate from the app's
 local processing.</p>
 <table>
@@ -990,6 +1107,15 @@ off.</p>
 <td>13 November 2026</td>
 <td>Microsoft Store free trial: license status check through Windows
 added</td>
+</tr>
+<tr>
+<td>3</td>
+<td>25 November 2026</td>
+<td>New tools: Windows' on-device OCR, voice and face detection engines,
+signing with a certificate, drawn signature; the lists of actions that
+write to the clipboard and of temporary files were extended; LibreOffice
+is also used for documents and presentations; in-app Support section.
+Network behaviour did not change</td>
 </tr>
 </tbody>
 </table>
